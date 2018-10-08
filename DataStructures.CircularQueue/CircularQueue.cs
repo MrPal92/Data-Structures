@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Assessment.Exception;
 
 namespace DataStructures.CircularQueue
 {
@@ -47,7 +48,7 @@ namespace DataStructures.CircularQueue
             // If queue is full then it will throw an exception
             else if (ElementCount == Length - 1)
             {
-                // throw exception
+                throw new QueueOverflow();
             }
             else
             {
@@ -73,8 +74,7 @@ namespace DataStructures.CircularQueue
 
             if (ElementCount == 0)
             {
-                // throw exception no element
-                return 0;
+                throw new QueueUnderflow();
             }
             else if (front == Length - 1)
             {

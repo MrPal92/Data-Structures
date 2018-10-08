@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assessment.Exception
 {
-    public class CustomException
+    public class CustomException : System.Exception
     {
         private string errorMessage;
 

@@ -43,5 +43,11 @@
     <Compile Include="CircularQueue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Assessment.Exception\Assessment.Exception.csproj">
+      <Project>{07e832f4-e800-489c-b2d4-4bf95062a8a6}</Project>
+      <Name>Assessment.Exception</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
