@@ -18,7 +18,7 @@ namespace DataStructures.CircularQueue
         public int Length { get; }
 
         // Pointers to Front element and Rear element in queue
-        private int front, rear = 0;
+        private int front, rear;
 
         // Constructor
         CircularQueue()
@@ -42,14 +42,16 @@ namespace DataStructures.CircularQueue
             // If there is no element in a queue then it will add new element
             // and increment the Element count.
             if (ElementCount == 0)
-            { 
+            {
+                front = 0;
+                rear = 0;
                 queue[rear] = value;
                 ElementCount++;
             }
             // If queue is full then it will throw an exception
             else if (ElementCount == Length - 1)
             {
-                throw new QueueOverflow();
+                throw new Custom_QueueOverflowException();
             }
             else
             {
@@ -75,7 +77,7 @@ namespace DataStructures.CircularQueue
 
             if (ElementCount == 0)
             {
-                throw new QueueUnderflow();
+                throw new Custom_QueueUnderflowException();
             }
             else if (front == Length - 1)
             {

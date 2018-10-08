@@ -9,6 +9,7 @@ namespace DataStructures.Tests
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }

@@ -54,6 +54,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Assessment.Exception\Assessment.Exception.csproj">
+      <Project>{07e832f4-e800-489c-b2d4-4bf95062a8a6}</Project>
+      <Name>Assessment.Exception</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataStructures.CircularQueue\DataStructures.CircularQueue.csproj">
+      <Project>{302c61be-2716-40e2-ae78-a107b0e57baa}</Project>
+      <Name>DataStructures.CircularQueue</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
