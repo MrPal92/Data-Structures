@@ -28,6 +28,7 @@ namespace DataStructures.CircularQueue
         }
 
         // Constructor Overloading
+        // Initialize the queue with size provided by uses
         CircularQueue(int size)
         {
             queue = new int?[Length = size];
